@@ -26,7 +26,7 @@ export default {
 const Template = (args) => {
   return (
     <CardComponent {...args}>
-      <img src="http://placehold.it/670x310"/>
+      <img src="http://placehold.it/670x310" alt="example" />
     </CardComponent>
   );
 };

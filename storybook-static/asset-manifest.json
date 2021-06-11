@@ -1,0 +1,43 @@
+{
+  "files": {
+    "0.20bfaec3.iframe.bundle.js": "./0.20bfaec3.iframe.bundle.js",
+    "main.css": "./static/css/main.17ead3bf.chunk.css",
+    "main.js": "./main.04fff4e4.iframe.bundle.js",
+    "main.css.map": "./static/css/main.17ead3bf.chunk.css.map",
+    "runtime~main.js": "./runtime~main.f30a135d.iframe.bundle.js",
+    "vendors~main.js": "./vendors~main.34a8b727.iframe.bundle.js",
+    "vendors~main.js.map": "./vendors~main.34a8b727.iframe.bundle.js.map",
+    "4.781d80f4.iframe.bundle.js": "./4.781d80f4.iframe.bundle.js",
+    "4.781d80f4.iframe.bundle.js.map": "./4.781d80f4.iframe.bundle.js.map",
+    "5.154b6976.iframe.bundle.js": "./5.154b6976.iframe.bundle.js",
+    "6.38d6011c.iframe.bundle.js": "./6.38d6011c.iframe.bundle.js",
+    "6.38d6011c.iframe.bundle.js.map": "./6.38d6011c.iframe.bundle.js.map",
+    "7.15b81376.iframe.bundle.js": "./7.15b81376.iframe.bundle.js",
+    "4.781d80f4.iframe.bundle.js.LICENSE.txt": "./4.781d80f4.iframe.bundle.js.LICENSE.txt",
+    "6.38d6011c.iframe.bundle.js.LICENSE.txt": "./6.38d6011c.iframe.bundle.js.LICENSE.txt",
+    "iframe.html": "./iframe.html",
+    "static/media/DestinFWBLogo.9bb6e41d.svg": "./static/media/DestinFWBLogo.9bb6e41d.svg",
+    "static/media/arrow-down.c7cad5ef.svg": "./static/media/arrow-down.c7cad5ef.svg",
+    "static/media/arrow-up.62c6e61e.svg": "./static/media/arrow-up.62c6e61e.svg",
+    "static/media/dashboard.bbce4918.svg": "./static/media/dashboard.bbce4918.svg",
+    "static/media/graph.d131409f.svg": "./static/media/graph.d131409f.svg",
+    "static/media/magnifying-glass.146cc397.svg": "./static/media/magnifying-glass.146cc397.svg",
+    "static/media/network.3452b248.svg": "./static/media/network.3452b248.svg",
+    "static/media/pencil.fb02254a.svg": "./static/media/pencil.fb02254a.svg",
+    "static/media/pie.1987ab2b.svg": "./static/media/pie.1987ab2b.svg",
+    "static/media/pin.8dac743a.svg": "./static/media/pin.8dac743a.svg",
+    "static/media/play.ae5b2c37.svg": "./static/media/play.ae5b2c37.svg",
+    "static/media/pointer.b2817c6e.svg": "./static/media/pointer.b2817c6e.svg",
+    "static/media/slide-left.97227424.svg": "./static/media/slide-left.97227424.svg",
+    "static/media/slide-right.c3bf0101.svg": "./static/media/slide-right.c3bf0101.svg",
+    "static/media/three-dots-vert.8ac1e526.svg": "./static/media/three-dots-vert.8ac1e526.svg",
+    "static/media/video.c3203452.svg": "./static/media/video.c3203452.svg",
+    "vendors~main.34a8b727.iframe.bundle.js.LICENSE.txt": "./vendors~main.34a8b727.iframe.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.f30a135d.iframe.bundle.js",
+    "vendors~main.34a8b727.iframe.bundle.js",
+    "static/css/main.17ead3bf.chunk.css",
+    "main.04fff4e4.iframe.bundle.js"
+  ]
+}
