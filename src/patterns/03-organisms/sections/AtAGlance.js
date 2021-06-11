@@ -10,30 +10,33 @@ const AtAGlance = ({ pathName, classes, ...props }) => {
         <h2 className={classNames('hed2')}>At a Glance</h2>
         <div
           className={classNames(
+            'flex-grow',
             'flex',
             'flex-row',
             'justify-around',
-            'w-full',
             'divide-x',
             'divide-gray-300',
-            'divide-solid'
+            'divide-solid',
+            'space-x-6'
           )}
         >
-          <div
-            className={classNames(
-              'w-1/3',
-              'flex',
-              'flex-col',
-              'justify-between',
-              'items-center'
-            )}
-          >
-            <Metric value="12.7%" trend="up" />
-            <h3 className={classNames('hed3')}>Visa Spend Per Visitor</h3>
+          <div className={classNames('w-1/3')}>
+            <div
+              className={classNames(
+                'flex',
+                'flex-col',
+                'justify-between',
+                'items-center'
+              )}
+            >
+              <Metric value="12.7%" trend="up" />
+              <h3 className={classNames('hed3')}>Visa Spend Per Visitor</h3>
+            </div>
           </div>
+
+          <div className={classNames('w-1/3')}>
           <div
             className={classNames(
-              'w-1/3',
               'flex',
               'flex-col',
               'justify-between',
@@ -42,10 +45,11 @@ const AtAGlance = ({ pathName, classes, ...props }) => {
           >
             <Metric value="12.4%" trend="down" />
             <h3 className={classNames('hed3')}>Visa Consumer Spend</h3>
-          </div>
+            </div>
+            </div>
+          <div className={classNames('w-1/3')}>
           <div
             className={classNames(
-              'w-1/3',
               'flex',
               'flex-col',
               'justify-between',
@@ -55,7 +59,8 @@ const AtAGlance = ({ pathName, classes, ...props }) => {
             <Metric value="0.6%" trend="up" />
             <h3 className={classNames('hed3')}>ROAI</h3>
           </div>
-        </div>
+          </div>
+          </div>
       </GridCard>
     </section>
   );

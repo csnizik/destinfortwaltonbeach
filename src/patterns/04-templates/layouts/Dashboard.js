@@ -32,9 +32,9 @@ const Dashboard = ({ pathName, ...props }) => {
     <section
       className={classNames(
         'relative',
-        'min-h-full',
-        'min-w-full',
         'bg-white-dark',
+        'min-w-screen',
+        'min-h-screen',
         'p-8',
         'flex',
         'flex-col',

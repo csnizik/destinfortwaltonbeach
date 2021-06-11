@@ -8,8 +8,8 @@ const GridCard = ({ ctaText, ...props }) => {
     <>
       <div
         class={classNames(
-          `w-full`,
           ctaText ? `rounded-t-lg` : `rounded-lg`,
+          'flex-shrink',
           `shadow`,
           `bg-white`,
           `md:space-x-3`,
@@ -26,7 +26,6 @@ const GridCard = ({ ctaText, ...props }) => {
       {ctaText && (
         <div
           className={classNames(
-            'w-full',
             'rounded-b-lg',
             'shadow',
             'bg-teal-dark',
