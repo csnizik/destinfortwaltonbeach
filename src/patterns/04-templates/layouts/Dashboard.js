@@ -10,7 +10,7 @@ import Button from '../../01-atoms/buttons/Button';
 import Icon from '../../01-atoms/images/Icon/Icon';
 
 const Dashboard = ({ pathName, ...props }) => {
-  const fullDisplay = () => {};
+  // const fullDisplay = () => {};
 
   const pageHeading = (path) => {
     switch (path) {
