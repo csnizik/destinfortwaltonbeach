@@ -16,6 +16,7 @@ function App() {
         <Route path="*" component={Home} />
       </Switch> */}
       <h1 className="hed1">App.js</h1>
+      <h1 className="super">Super H1</h1>
     </>
   );
 }
