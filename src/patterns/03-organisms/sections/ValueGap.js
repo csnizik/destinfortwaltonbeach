@@ -7,7 +7,6 @@ const ValueGap = ({ pathName, classes, ...props }) => {
   return (
     <section className={classNames(classes)}>
       <Card
-        width="full"
         iconType="Graph"
         iconColor="NavySky"
         iconSize="small"
@@ -15,7 +14,7 @@ const ValueGap = ({ pathName, classes, ...props }) => {
         subheading="Measures decreased dark green gap"
       >
         <Chart
-          width={'300px'}
+          width={'240px'}
           height={'300px'}
           chartType="ComboChart"
           loader={<div>Loading Chart</div>}

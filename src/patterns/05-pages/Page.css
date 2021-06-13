@@ -1,0 +1,12 @@
+@import "../../index.css";
+
+#sidebar {
+    width: 264px;
+}
+
+@media screen and (max-width: 640px) {
+    #sidebar {
+        width: 20%;
+    }
+}
+

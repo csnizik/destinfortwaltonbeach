@@ -7,7 +7,6 @@ const WaterAdventures = ({ pathName, classes, ...props }) => {
   return (
     <section className={classNames(classes)}>
       <Card
-        width="full"
         iconType="Pin"
         iconColor="NavySky"
         iconSize="small"
@@ -15,7 +14,7 @@ const WaterAdventures = ({ pathName, classes, ...props }) => {
         subheading="Measures an increase in water based, family adventures taken"
       >
         <Chart
-          width={'500px'}
+          width={'280px'}
           height={'300px'}
           chartType="Bar"
           loader={<div>Loading Chart</div>}

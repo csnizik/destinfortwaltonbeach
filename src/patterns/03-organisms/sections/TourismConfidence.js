@@ -7,8 +7,7 @@ const TourismConfidence = ({ pathName, classes, ...props }) => {
   return (
     <section className={classNames(classes)}>
       <Card
-        width="full"
-        iconType="Pie"
+        iconType="ThumbsUp"
         iconColor="NavySky"
         iconSize="small"
         heading="Tourism Confidence"
