@@ -10,39 +10,50 @@ import { ReactComponent as Graph } from './graph.svg';
 import { ReactComponent as MagnifyingGlass } from './magnifying-glass.svg';
 import { ReactComponent as Network } from './network.svg';
 import { ReactComponent as Pencil } from './pencil.svg';
-import { ReactComponent as Pie } from './pie.svg';
+import { ReactComponent as Pie } from './donutchart.svg';
 import { ReactComponent as Pin } from './pin.svg';
 import { ReactComponent as Play } from './play.svg';
 import { ReactComponent as Pointer } from './pointer.svg';
 import { ReactComponent as SlideLeft } from './slide-left.svg';
 import { ReactComponent as SlideRight } from './slide-right.svg';
 import { ReactComponent as ThreeDots } from './three-dots-vert.svg';
+import { ReactComponent as ThumbsUp } from './thumbsup.svg';
 import { ReactComponent as Video } from './video.svg';
 
 const iconColor = (color) => {
   switch (color) {
     case 'Crystal-Clear Teal':
+    case 'teal':
       return 'text-teal';
     case 'Sunny-Sky Blue':
+    case 'blue':
       return 'text-blue';
     case 'Sunset Pink':
+    case 'pink':
       return 'text-pink';
     case 'Sea Foam Teal':
+    case 'teal-dark':
       return 'text-teal-dark';
     case 'Navy Sky':
+    case 'blue-dark':
       return 'text-blue-dark';
     case 'Moss Green':
+    case 'green':
       return 'text-green';
     case 'Dusty Rose':
+    case 'red':
       return 'text-red';
     case 'Whitewash White':
+    case 'white-dark':
       return 'text-white-dark';
     case 'Black':
+    case 'black':
       return 'text-black';
     case 'Gray':
+    case 'gray':
       return 'text-gray-500';
     default:
-      return '';
+      return 'fill-current';
   }
 };
 
@@ -63,166 +74,44 @@ const renderIcon = ({ type, size, color, ...props }) => {
   switch (type) {
     case 'ArrowDown':
       return (
-        <ArrowDown
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            color && iconColor(color)
-          )}
-        />
+        <ArrowDown className={classNames('fill-current', iconSize(size), color && iconColor(color), props.classes)} />
       );
     case 'ArrowUp':
-      return (
-        <ArrowUp
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <ArrowUp className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Dashboard':
-      return (
-        <Dashboard
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Dashboard className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Graph':
-      return (
-        <Graph
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Graph className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'MagnifyingGlass':
       return (
-        <MagnifyingGlass
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
+        <MagnifyingGlass className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />
       );
     case 'Network':
-      return (
-        <Network
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Network className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Pencil':
-      return (
-        <Pencil
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Pencil className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Pie':
-      return (
-        <Pie
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Pie className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Pin':
-      return (
-        <Pin
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Pin className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Play':
-      return (
-        <Play
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Play className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Pointer':
-      return (
-        <Pointer
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Pointer className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'SlideLeft':
-      return (
-        <SlideLeft
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <SlideLeft className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'SlideRight':
-      return (
-        <SlideRight
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <SlideRight className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'ThreeDots':
-      return (
-        <ThreeDots
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <ThreeDots className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'ThreeDotsHoriz':
       return (
-        <ThreeDots
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color),
-            'transform',
-            'rotate-90'
-          )}
-        />
+        <ThreeDots className={classNames('fill-current', iconSize(size), iconColor(color), 'transform', 'rotate-90')} />
       );
+    case 'ThumbsUp':
+      return <ThumbsUp className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Video':
-      return (
-        <Video
-          className={classNames(
-            'fill-current',
-            iconSize(size),
-            iconColor(color)
-          )}
-        />
-      );
+      return <Video className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     default:
       return '';
   }
