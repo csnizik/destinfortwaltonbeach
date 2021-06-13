@@ -2,47 +2,23 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './Card.css';
+import { PreviousMap } from 'postcss';
 
 const GridCard = ({ ctaText, ...props }) => {
   return (
-    <>
-      <div
-        class={classNames(
-          ctaText ? `rounded-t-lg` : `rounded-lg`,
-          'flex-shrink',
-          `shadow`,
-          `bg-white`,
-          `md:space-x-3`,
-          `flex`,
-          `flex-col`,
-          `mx-auto`,
-          'mt-5',
-          ctaText ? 'mb-0' : 'mb-5'
-        )}
-      >
+    <div className={props.classes}>
+      <div class={classNames(ctaText ? `rounded-t-lg` : `rounded-lg`, `shadow`, `bg-white`, `flex`, `flex-col`)}>
         <div className={classNames('p-4')}>{props.children}</div>
       </div>
 
       {ctaText && (
-        <div
-          className={classNames(
-            'rounded-b-lg',
-            'shadow',
-            'bg-teal-dark',
-            'md:space-x-3',
-            'flex',
-            'mx-auto',
-            'p-4',
-            'mb-5',
-            'justify-center'
-          )}
-        >
+        <div className={classNames('rounded-b-lg', 'shadow', 'bg-teal-dark', 'flex', 'p-4', 'justify-center')}>
           <button>
             <h3 className={classNames('hed3')}>{ctaText}</h3>
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
