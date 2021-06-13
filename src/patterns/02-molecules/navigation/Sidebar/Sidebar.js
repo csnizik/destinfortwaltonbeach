@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import Icon from '../../../01-atoms/images/Icon/Icon';
 import Logo from '../../../01-atoms/images/Logo/Logo';
-import { NavLink } from 'react-router-dom';
+import NavLink from '../../../01-atoms/links/NavLink/NavLink';
 
 import './Sidebar.css';
 
@@ -12,215 +12,39 @@ function Sidebar({ pathName, ...props }) {
   return (
     <>
       <input
-        type="checkbox"
+        type='checkbox'
         checked={isExpanded}
-        className={classNames(
-          'openSidebarMenu',
-          'transition-all',
-          'box-border',
-          'hidden'
-        )}
-        id="openSidebarMenu"
+        className={classNames('openSidebarMenu', 'transition-all', 'box-border', 'hidden')}
+        id='openSidebarMenu'
       />
       <div
-        id="sidebarMenu"
+        id='sidebarMenu'
         className={classNames(
-          'md:w-64',
-          'bg-blue-dark',
           'min-h-full',
+          'bg-blue-dark',
           'flex',
           'flex-col',
           'items-end',
           'justify-start'
-        )}
-      >
-        <Logo size="FullWidth" />
+        )}>
+        <div className={classNames('self-start', 'w:self-auto', 'w-20', 'sm:w-64')}>
+          <Logo size='Full' />
+        </div>
+        {/* <div className={classNames('nav-item--active')}></div> */}
 
-        <ul id="page-nav">
-          <li
-            className={classNames(
-              'list-none',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/' ? 'bg-white-dark' : '',
-              pathName
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon', pathName)}>
-                <Icon type="Dashboard" size="Medium" color={ pathName  === '/' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/' ? 'text-black' : 'text-teal')}>
-                <NavLink to="/">Dashboard</NavLink>
-              </div>
-            </div>
-          </li>
-          <li
-            className={classNames(
-              'list-none',
-              'bg-transparent',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/markets' ? 'bg-white-dark' : ''
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon')}>
-                <Icon type="Network" size="Medium" color={ pathName  === '/markets' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/markets' ? 'text-black' : 'text-teal')}>
-                <NavLink to="markets">Top Markets</NavLink>
-              </div>
-            </div>
-          </li>
-          <li
-            className={classNames(
-              'list-none',
-              'bg-transparent',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/water' ? 'bg-white-dark' : ''
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon')}>
-                <Icon type="Pin" size="Medium" color={ pathName  === '/water' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/water' ? 'text-black' : 'text-teal')}>
-                <NavLink to="water">Water Adventures</NavLink>
-              </div>
-            </div>
-          </li>
-          <li
-            className={classNames(
-              'list-none',
-              'bg-transparent',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/value' ? 'bg-white-dark' : ''
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon')}>
-                <Icon type="Graph" size="Medium" color={ pathName  === '/value' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/value' ? 'text-black' : 'text-teal')}>
-                <NavLink to="value">Value Gap</NavLink>
-              </div>
-            </div>
-          </li>
-          <li
-            className={classNames(
-              'list-none',
-              'bg-transparent',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/confidence' ? 'bg-white-dark' : ''
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon')}>
-                <Icon type="Pie" size="Medium" color={ pathName  === '/confidence' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/confidence' ? 'text-black' : 'text-teal')}>
-                <NavLink to="confidence">Tourism Confidence</NavLink>
-              </div>
-            </div>
-          </li>
-          <li
-            className={classNames(
-              'list-none',
-              'bg-transparent',
-              '-mr-7',
-              'ml-2',
-              'py-4',
-              'pl-6',
-              'rounded-bl-full',
-              'rounded-tl-full',
-              pathName === '/sentiment' ? 'bg-white-dark' : ''
-            )}
-          >
-            <div
-              className={classNames(
-                'flex',
-                'flex-row',
-                'items-center',
-                'w-56',
-                'listItem'
-              )}
-            >
-              <div className={classNames('listItemIcon')}>
-                <Icon type="Video" size="Medium" color={ pathName  === '/sentiment' ? 'black' : 'Crystal-Clear Teal'} />
-              </div>
-              <div className={classNames('pl-3', 'listItemText', pathName === '/sentiment' ? 'text-black' : 'text-teal')}>
-                <NavLink to="sentiment">Family Sentiment</NavLink>
-              </div>
-            </div>
-          </li>
+        <ul id='page-nav'>
+
+          <NavLink pathName={pathName} url="/" title="Dashboard" iconType="Dashboard" key="dashboard" />
+          <NavLink pathName={pathName} url="/markets" title="Top Markets" iconType="Network" key="markets"/>
+          <NavLink pathName={pathName} url="/water" title="Water Adventures" iconType="Pin" key="water" />
+          <NavLink pathName={pathName} url="/value" title="Value Gap" iconType="Graph" key="value" />
+          <NavLink pathName={pathName} url="/confidence" title="Tourism Confidence" iconType="ThumbsUp" key="confidence"/>
+          <NavLink pathName={pathName} url="/sentiment" title="Family Sentiment" iconType="Video" key="sentiment"/>
+          
         </ul>
         <label
-          id="sidebarIcon"
-          htmlFor="openSidebarMenu"
+          id='sidebarIcon'
+          htmlFor='openSidebarMenu'
           className={classNames(
             'md:hidden',
             'transition-all',
@@ -237,13 +61,9 @@ function Sidebar({ pathName, ...props }) {
             'justify-center',
             'items-center',
             'ring-0'
-          )}
-        >
-          <div
-            className={classNames('cursor-pointer')}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            <Icon type="SlideRight" />
+          )}>
+          <div className={classNames('cursor-pointer')} onClick={() => setIsExpanded(!isExpanded)}>
+            <Icon type='SlideRight' />
           </div>
         </label>
       </div>

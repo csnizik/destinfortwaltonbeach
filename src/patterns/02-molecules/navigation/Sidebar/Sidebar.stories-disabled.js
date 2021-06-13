@@ -1,12 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
 import SidebarComponent from './Sidebar';
 
 export default {
   title: '02-molecules',
-
+  component: SidebarComponent,
   decorators: [
     (Story) => (
-      <div style={{ margin: '-16px', background: '#E5E5E5' }}>
+      <div className={classNames('min-h-screen', 'w-full', 'sm:w-64')}>
         <Story />
       </div>
     ),
