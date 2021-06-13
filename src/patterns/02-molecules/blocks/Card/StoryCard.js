@@ -17,7 +17,7 @@ const StoryCard = (width, title, link, ...props) => {
     >
       <img
         className={classNames('rounded-l-lg')}
-        src="http://placehold.it/300x140" alt="sample"
+        src="http://placehold.it/120x120" alt="sample"
       />
       <h3 className={classNames('hed3', 'px-6')}>
       Mom Panel Product Test Image is Great
