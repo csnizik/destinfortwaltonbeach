@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './Card.css';
-import { PreviousMap } from 'postcss';
+// import { PreviousMap } from 'postcss';
 
 const GridCard = ({ ctaText, ...props }) => {
   return (
