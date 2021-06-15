@@ -1,35 +1,41 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../../02-molecules/blocks/Card/Card';
 import Chart from 'react-google-charts';
 
-const TourismConfidence = ({ pathName, classes, ...props }) => {
+const TourismConfidence = ({ pathName, classes,  ...props }) => {
+  const legend = pathName === '/confidence' ? { textStyle: { color: 'blue', fontSize: 16 } } : 'none';
+  const width = pathName === '/confidence' ? 1200 : 300;
+  const height = pathName === '/confidence' ? 800 : 300;
   return (
     <section className={classNames(classes)}>
       <Card
-        iconType="ThumbsUp"
-        iconColor="NavySky"
-        iconSize="small"
-        heading="Tourism Confidence"
-        subheading="Measures local sentiment towards tourism"
-      >
+        iconType='ThumbsUp'
+        iconColor='NavySky'
+        iconSize='small'
+        heading='Tourism Confidence'
+        subheading='Measures local sentiment towards tourism'
+        pathName={pathName}
+        link='/confidence'>
         <Chart
-          width={'300px'}
-          height={'300px'}
-          chartType="PieChart"
+          width={width}
+          height={height}
+          chartType='PieChart'
           loader={<div>Loading Chart</div>}
           data={[
-            ['Task', 'Hours per Day'],
-            ['Work', 11],
-            ['Eat', 2],
-            ['Commute', 2],
-            ['Watch TV', 2],
-            ['Sleep', 7],
+            ['Tourism Sentiment', 'Percent'],
+            ['Against tourists', 20],
+            ['Accepting of tourists', 80],
           ]}
           options={{
-            title: 'My Daily Activities',
-            // Just add this option
-            pieHole: 0.4,
+            // title: 'My Daily Activities',
+            pieHole: 0.5,
+            pieSliceText: 'Percent',
+            pieSliceTextStyle: {
+              color: 'black',
+            },
+            legend: legend,
+            colors: ['#AFE1E2', '#48AAED'],
           }}
           rootProps={{ 'data-testid': '3' }}
         />

@@ -19,6 +19,7 @@ import { ReactComponent as SlideRight } from './slide-right.svg';
 import { ReactComponent as ThreeDots } from './three-dots-vert.svg';
 import { ReactComponent as ThumbsUp } from './thumbsup.svg';
 import { ReactComponent as Video } from './video.svg';
+import { ReactComponent as X } from './x.svg';
 
 const iconColor = (color) => {
   switch (color) {
@@ -112,6 +113,8 @@ const renderIcon = ({ type, size, color, ...props }) => {
       return <ThumbsUp className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     case 'Video':
       return <Video className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
+    case 'X':
+      return <X className={classNames('fill-current', iconSize(size), iconColor(color), props.classes)} />;
     default:
       return '';
   }

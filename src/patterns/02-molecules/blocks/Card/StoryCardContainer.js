@@ -16,7 +16,6 @@ const StoryCardContainer = ({
     <div
       class={classNames(
         'w-full',
-        `md:w-${width}`,
         'bg-transparent',
         'flex',
         'flex-col',

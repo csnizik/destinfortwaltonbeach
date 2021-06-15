@@ -4,32 +4,37 @@ import Card from '../../02-molecules/blocks/Card/Card';
 import Chart from '../../02-molecules/blocks/Chart/Chart';
 
 const WaterAdventures = ({ pathName, classes, ...props }) => {
+  const width = pathName === '/water' ? 800 : 280;
+  const height = pathName === '/water' ? 800 : 470;
+  const legend = pathName === '/water' ? { textStyle: { color: 'blue', fontSize: 16 } } : 'none';
+  const subTitle = pathName === '/water' ? 'Measures an increase in water based, family adventures taken' : '';
   return (
     <section className={classNames(classes)}>
       <Card
-        iconType="Pin"
-        iconColor="NavySky"
-        iconSize="small"
-        heading="Water Adventures"
-        subheading="Measures an increase in water based, family adventures taken"
-      >
+        iconType='Pin'
+        iconColor='NavySky'
+        iconSize='small'
+        heading='Water Adventures'
+        subheading={pathName === '/markets' ? 'Measures an increase in water based, family adventures taken' : ''}
+        pathName={pathName}
+        link='/water'>
         <Chart
-          width={'280px'}
-          height={'300px'}
-          chartType="Bar"
+          width={width}
+          height={height}
+          chartType='Bar'
           loader={<div>Loading Chart</div>}
           data={[
-            ['Year', 'Sales', 'Expenses', 'Profit'],
-            ['2014', 1000, 400, 200],
-            ['2015', 1170, 460, 250],
-            ['2016', 660, 1120, 300],
-            ['2017', 1030, 540, 350],
+            ['Year', 'Total Water Adventures', { role: 'style' }],
+            ['2019', 6.94, '#124168'],
+            ['2020', 8.49, '#48AAED'],
+            ['2021', 10.49, '#77DBDB'],
           ]}
           options={{
-            // Material design options
+            legend: legend,
             chart: {
-              title: 'Company Performance',
-              subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+              subtitle: subTitle,
+              bar: { groupWidth: '100%' },
+              legend: legend,
             },
           }}
           // For tests
