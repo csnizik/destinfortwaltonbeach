@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React from 'react';
 import Card from '../../02-molecules/blocks/Card/Card';
 import Chart from 'react-google-charts';
 
